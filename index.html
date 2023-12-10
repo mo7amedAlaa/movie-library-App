@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>movie App |home</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="top">
+    <header class="header" id="header" data-header>
+      <div class="container">
+        <div class="overlay" id="overlay" data-overlay></div>
+        <a href="./index.html" class="logo">
+          <img src="./assets/images/favicon.svg" alt="logo" />
+        </a>
+
+        <div class="header-actions">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="search for Movie eng:- leo,matrix.."
+            id="searchInput"
+          />
+          <button class="search-btn" id="searchBtn">
+            <a href="./page/Searchresults.html"
+              ><ion-icon name="search-outline"></ion-icon
+            ></a>
+          </button>
+
+          <button id="dark-mode">
+            <ion-icon name="contrast-outline"></ion-icon>
+          </button>
+        </div>
+
+        <button class="menu-open-btn" data-menu-open-btn>
+          <ion-icon name="reorder-two"></ion-icon>
+        </button>
+
+        <nav class="navbar" id="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="./index.html" class="logo">
+              <img src="./assets/images/logo.svg" alt="logo" />
+            </a>
+            <button class="menu-close-btn" data-menu-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="./index.html" class="navbar-link">Home</a>
+            </li>
+
+            <li>
+              <a href="./page/Moviedetails.html" class="navbar-link"
+                >Movie Details
+              </a>
+            </li>
+
+            <li>
+              <a href="/#TV" class="navbar-link">Tv Show</a>
+            </li>
+
+            <li>
+              <a href="./page/Watchlist.html" class="navbar-link">Watchlist</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-social-list">
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <section class="hero">
+          <div class="container">
+            <div class="hero-content">
+              <p class="hero-subtitle">MEC Movie App</p>
+
+              <h1 class="h1 hero-title">
+                Unlimited <strong>Movie</strong>, TVs Shows, & More.
+              </h1>
+
+              <button class="btn btn-primary">
+                <ion-icon name="play"></ion-icon>
+                <span>Read Now</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!--- #UPCOMING -->
+        <section class="upcoming">
+          <div class="container">
+            <div class="flex-wrapper">
+              <div class="title-wrapper">
+                <p class="section-subtitle">Online Streaming</p>
+                <h2 class="h2 section-title">Upcoming Movies</h2>
+              </div>
+
+              <ul class="filter-list">
+                <li>
+                  <button class="filter-btn">Movies</button>
+                </li>
+
+                <li>
+                  <button class="filter-btn">TV Shows</button>
+                </li>
+
+                <li>
+                  <button class="filter-btn">Anime</button>
+                </li>
+              </ul>
+            </div>
+            <ul class="movies-list has-scrollbar" id="incommingSec"></ul>
+          </div>
+        </section>
+        <!-- featured reated -->
+        <section class="featured sec">
+          <div class="container">
+            <p class="section-subtitle">Online Streaming</p>
+
+            <h2 class="h2 section-title">Featured Movies</h2>
+
+            <ul class="filter-list">
+              <li>
+                <button class="filter-btn">Movies</button>
+              </li>
+
+              <li>
+                <button class="filter-btn">TV Shows</button>
+              </li>
+            </ul>
+            <ul class="movies-list" id="featuredSec"></ul>
+          </div>
+        </section>
+        <section class="top-rated sec">
+          <div class="container">
+            <p class="section-subtitle">Online Streaming</p>
+            <h2 class="h2 section-title">Top Rated Movies</h2>
+            <ul class="filter-list">
+              <li>
+                <button class="filter-btn">Movies</button>
+              </li>
+              <li>
+                <button class="filter-btn">TV Shows</button>
+              </li>
+              <li>
+                <button class="filter-btn">Documentary</button>
+              </li>
+              <li>
+                <button class="filter-btn">Sports</button>
+              </li>
+            </ul>
+            <ul class="movies-list" id="topRatedSec">
+              <li>
+                <div class="movie-card">
+                  <a href="./movie-details.html">
+                    <figure class="card-banner">
+                      <img
+                        src="./assets/images/movie-1.png"
+                        alt="Sonic the Hedgehog 2 movie poster"
+                      />
+                    </figure>
+                  </a>
+
+                  <div class="title-wrapper">
+                    <a href="./movie-details.html">
+                      <h3 class="card-title">Sonic the Hedgehog 2</h3>
+                    </a>
+                    <time datetime="2022">2022</time>
+                  </div>
+
+                  <div class="card-meta">
+                    <div class="badge badge-outline">2K</div>
+                    <div class="duration">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT122M">122 min</time>
+                    </div>
+
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+
+                      <data>7.8</data>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="trending sec">
+          <div class="container">
+            <p class="section-subtitle">Online Streaming</p>
+
+            <h2 class="h2 section-title">trending Movies</h2>
+
+            <ul class="filter-list">
+              <li>
+                <button class="filter-btn">Movies</button>
+              </li>
+
+              <li>
+                <button class="filter-btn">TV Shows</button>
+              </li>
+
+              <li>
+                <button class="filter-btn">Documentary</button>
+              </li>
+
+              <li>
+                <button class="filter-btn">Sports</button>
+              </li>
+            </ul>
+
+            <ul class="movies-list" id="trendingSec"></ul>
+          </div>
+        </section>
+
+        <!--
+        - #TV SERIES
+      -->
+
+        <section class="tv-series">
+          <div class="container">
+            <p class="section-subtitle">Best TV Series</p>
+
+            <h2 class="h2 section-title">World Best TV Series</h2>
+
+            <ul class="movies-list" id="TV"></ul>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!--
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-brand-wrapper">
+            <a href="./index.html" class="logo">
+              <img src="./assets/images/logo.svg" alt="logo" />
+            </a>
+
+            <ul class="footer-list">
+              <li>
+                <a href="./index.html" class="footer-link">Home</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Movie Detail</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">TV Show</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Watchlist</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="quicklink-wrapper">
+            <ul class="quicklink-list">
+              <li>
+                <a href="#" class="quicklink-link">Faq</a>
+              </li>
+
+              <li>
+                <a href="#" class="quicklink-link">Help center</a>
+              </li>
+
+              <li>
+                <a href="#" class="quicklink-link">Terms of use</a>
+              </li>
+
+              <li>
+                <a href="#" class="quicklink-link">Privacy</a>
+              </li>
+            </ul>
+
+            <ul class="social-list">
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            &copy; 2024 <a href="#">codewithHamo3laa</a>. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--
+    - #GO TO TOP
+  -->
+
+    <a href="#top" class="go-top" data-go-top id="go-top">
+      <ion-icon name="chevron-up"></ion-icon>
+    </a>
+
+    <script src="./js/nav-header.js"></script>
+    <script src="./js/main.js" type="module"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
